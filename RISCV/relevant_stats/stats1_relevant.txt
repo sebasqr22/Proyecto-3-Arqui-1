@@ -1,6 +1,3 @@
-Instructions Executed: 10000000.0
-Clock Cycles: 29875402000.0
-IPC: 0.167362
 L1D Cache Misses: 612890.0
 L1I Cache Misses: 458.0
 L1D Cache Accesses: 3882191.0
@@ -10,13 +7,5 @@ L1I Cache Miss Rate: 0.00027691100334288415
 Branch Predictor Lookups: 474206.0
 Conditional Branches Predicted: 466388.0
 Conditional Branches Incorrect: 5047.0
-BTB Lookups: 433593.0
-BTB Updates: 3027.0
-BTB Hits: 432288.0
-BTB Hit Ratio: 0.99699
-RAS Used: 2527.0
-RAS Incorrect: 3.0
-Indirect Predictor Lookups: 66.0
-Indirect Target Hits: 0.0
 Indirect Misses: 66.0
 Indirect Mispredicted: 18.0

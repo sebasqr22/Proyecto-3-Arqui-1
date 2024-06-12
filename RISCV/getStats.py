@@ -12,10 +12,6 @@ def parse_stats_file(filename):
 
 def extract_relevant_stats(stats):
     relevant_stats = {}
-    # Extracting relevant stats
-    relevant_stats['Instructions Executed'] = stats.get('simInsts', 0)
-    relevant_stats['Clock Cycles'] = stats.get('simTicks', 0)
-    relevant_stats['IPC'] = stats.get('system.cpu.ipc', 0)
 
     # Cache misses and accesses
     relevant_stats['L1D Cache Misses'] = stats.get('system.cpu.dcache.overallMisses::total', 0)
@@ -31,14 +27,6 @@ def extract_relevant_stats(stats):
     relevant_stats['Branch Predictor Lookups'] = stats.get('system.cpu.branchPred.lookups', 0)
     relevant_stats['Conditional Branches Predicted'] = stats.get('system.cpu.branchPred.condPredicted', 0)
     relevant_stats['Conditional Branches Incorrect'] = stats.get('system.cpu.branchPred.condIncorrect', 0)
-    relevant_stats['BTB Lookups'] = stats.get('system.cpu.branchPred.BTBLookups', 0)
-    relevant_stats['BTB Updates'] = stats.get('system.cpu.branchPred.BTBUpdates', 0)
-    relevant_stats['BTB Hits'] = stats.get('system.cpu.branchPred.BTBHits', 0)
-    relevant_stats['BTB Hit Ratio'] = stats.get('system.cpu.branchPred.BTBHitRatio', 0)
-    relevant_stats['RAS Used'] = stats.get('system.cpu.branchPred.RASUsed', 0)
-    relevant_stats['RAS Incorrect'] = stats.get('system.cpu.branchPred.RASIncorrect', 0)
-    relevant_stats['Indirect Predictor Lookups'] = stats.get('system.cpu.branchPred.indirectLookups', 0)
-    relevant_stats['Indirect Target Hits'] = stats.get('system.cpu.branchPred.indirectHits', 0)
     relevant_stats['Indirect Misses'] = stats.get('system.cpu.branchPred.indirectMisses', 0)
     relevant_stats['Indirect Mispredicted'] = stats.get('system.cpu.branchPred.indirectMispredicted', 0)
 
